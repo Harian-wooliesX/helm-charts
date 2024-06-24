@@ -304,7 +304,10 @@ tolerations: []
 topologySpreadConstraints: []
 
 # Annotations to be added to the deployment/statefulset
-annotations: {}
+annotations: {
+    metrics.dynatrace.com/port: '9100',
+    metrics.dynatrace.com/scrape: 'true'
+}
 
 # Annotations to be added to the pod
 podAnnotations: {}

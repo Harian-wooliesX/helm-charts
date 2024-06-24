@@ -363,7 +363,10 @@ podAnnotations:
 podLabels: {}
 
 # Annotations to be added to node exporter daemonset
-daemonsetAnnotations: {}
+daemonsetAnnotations: {
+    metrics.dynatrace.com/port: '9100',
+    metrics.dynatrace.com/scrape: 'true'
+}
 
 ## set to true to add the release label so scraping of the servicemonitor with kube-prometheus-stack works out of the box
 releaseLabel: false
